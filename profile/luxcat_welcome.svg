@@ -1,18 +1,20 @@
-<svg width="100%" height="100%" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+<svg width="100%" height="100%" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
 
   <defs>
+    <!-- 背景渐变 -->
     <radialGradient id="bgGradient" cx="50%" cy="20%" r="80%">
       <stop offset="0%" stop-color="#ffe6f2"/>
       <stop offset="50%" stop-color="#f5e0ff"/>
       <stop offset="100%" stop-color="#dfe6ff"/>
     </radialGradient>
 
-    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+    <!-- 闪烁渐变 -->
+    <linearGradient id="gradMulti" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#ff66b2">
-        <animate attributeName="offset" values="0;1" dur="4s" repeatCount="indefinite"/>
+        <animate attributeName="offset" values="0;1;0" dur="3s" repeatCount="indefinite"/>
       </stop>
       <stop offset="100%" stop-color="#8a2be2">
-        <animate attributeName="offset" values="1;0" dur="4s" repeatCount="indefinite"/>
+        <animate attributeName="offset" values="1;0;1" dur="3s" repeatCount="indefinite"/>
       </stop>
     </linearGradient>
 
@@ -20,38 +22,38 @@
       .title {
         font-size: 64px;
         font-weight: 700;
-        fill: url(#textGradient);
-        animation: shimmer 4s linear infinite;
+        fill: url(#gradMulti);
+        animation: shimmer 3s linear infinite;
       }
+      @keyframes shimmer { 0%,100% { fill-opacity: 1; } 50% { fill-opacity:0.7; } }
 
-      @keyframes shimmer {
-        0% { fill-opacity: 1; }
-        50% { fill-opacity: 0.7; }
-        100% { fill-opacity: 1; }
-      }
-
-      .desc {
-        font-size: 24px;
-        fill: #555;
-      }
+      .desc { font-size: 24px; fill: #555; }
 
       .lang {
-        font-size: 32px;
+        font-size: 36px;
         font-weight: bold;
         text-anchor: middle;
+        fill: url(#gradMulti); /* 渐变闪烁 */
         opacity: 0;
-        animation: fadeInOut 10s infinite;
+        animation: fadeInOut 12s infinite, float 3s ease-in-out infinite alternate;
       }
 
       @keyframes fadeInOut {
-        0%, 20%, 100% { opacity: 0; }
-        10% { opacity: 1; }
+        0%,20%,100% { opacity: 0; }
+        10%,30% { opacity: 1; }
       }
-      #zh { animation-delay: 0s; fill: #e91e63; }
-      #en { animation-delay: 2s; fill: #3f51b5; }
-      #ja { animation-delay: 4s; fill: #009688; }
-      #fr { animation-delay: 6s; fill: #9c27b0; }
-      #es { animation-delay: 8s; fill: #ff9800; }
+
+      @keyframes float {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0); }
+      }
+
+      #zh { animation-delay: 0s; }
+      #en { animation-delay: 2.4s; }
+      #ja { animation-delay: 4.8s; }
+      #fr { animation-delay: 7.2s; }
+      #es { animation-delay: 9.6s; }
     ]]></style>
   </defs>
 
@@ -59,14 +61,14 @@
   <rect width="100%" height="100%" fill="url(#bgGradient)"/>
 
   <!-- 标题 -->
-  <text x="400" y="200" class="title" text-anchor="middle">Luxcat Studio</text>
-  <text x="400" y="260" class="desc" text-anchor="middle">Creative Code, Aesthetic Design</text>
+  <text x="400" y="180" class="title" text-anchor="middle">Luxcat Studio</text>
+  <text x="400" y="240" class="desc" text-anchor="middle">Creative Code, Aesthetic Design</text>
 
-  <!-- 多语言自动切换 -->
-  <text x="400" y="360" id="zh" class="lang">欢迎来到 Luxcat Studio</text>
-  <text x="400" y="360" id="en" class="lang">Welcome to Luxcat Studio</text>
-  <text x="400" y="360" id="ja" class="lang">Luxcat Studioへようこそ</text>
-  <text x="400" y="360" id="fr" class="lang">Bienvenue à Luxcat Studio</text>
-  <text x="400" y="360" id="es" class="lang">Bienvenido a Luxcat Studio</text>
+  <!-- 多语言文字 -->
+  <text x="400" y="320" id="zh" class="lang">欢迎来到 Luxcat Studio</text>
+  <text x="400" y="320" id="en" class="lang">Welcome to Luxcat Studio</text>
+  <text x="400" y="320" id="ja" class="lang">Luxcat Studioへようこそ</text>
+  <text x="400" y="320" id="fr" class="lang">Bienvenue à Luxcat Studio</text>
+  <text x="400" y="320" id="es" class="lang">Bienvenido a Luxcat Studio</text>
 
 </svg>
