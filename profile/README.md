@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=Celestine-Lux&fontSize=80&fontAlignY=35&animation=twinkling&desc=为了更美好的明天而存在&descAlignY=60&descSize=20" alt="Header" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=Luxcat Studio&fontSize=80&fontAlignY=35&animation=twinkling&desc=为了更美好的明天而存在&descAlignY=60&descSize=20" alt="Header" />
 </div>
 
 <h1 align="center">🌸 Welcome to Luxcat Studio 🌸</h1>
