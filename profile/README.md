@@ -4,13 +4,21 @@
 
 <br />
 
-![](./luxcat_welcome.svg)
+<p align="center">
+  <img src="./luxcat_welcome.svg" width="800" alt="Welcome Animation" />
+</p>
 
 ---
 
 <div align="center">
+
   <h2>🌟 关于我们</h2>
-  <p>Luxcat Studio 是一个巨大的猫窝<次猫猫>，里面有许多有趣的事情喵。</p>
+  <p>
+    <b>Luxcat Studio</b> 是一个巨大的猫窝（次猫猫喵~）<br>
+    我们致力于创造充满幻想与温度的技术与艺术作品。
+  </p>
+
+  <br />
 
   <h3>🛠️ 技术栈</h3>
   <p>
@@ -45,5 +53,5 @@
 ---
 
 <div align="center">
-  <p>🌙 Luxcat Studio · 为了更美好的明天而存在</p>
+  <p>🌙 <b>Luxcat Studio</b> · 为了更美好的明天而存在</p>
 </div>
