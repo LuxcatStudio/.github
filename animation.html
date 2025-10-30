@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<style>
+  body {
+    background: radial-gradient(circle at 50% 20%, #ffe6f2, #f5e0ff, #dfe6ff);
+    font-family: "Segoe UI", "Noto Sans JP", sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    color: #333;
+    text-align: center;
+  }
+  .title {
+    font-size: 64px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #ff66b2, #8a2be2, #00bcd4);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: shimmer 4s infinite linear;
+  }
+  @keyframes shimmer {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+  }
+  .welcome-text {
+    font-size: 28px;
+    font-weight: bold;
+    fill: #e91e63;
+    text-anchor: middle;
+    opacity: 0;
+  }
+  @keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    10%, 30% { opacity: 1; }
+  }
+</style>
+</head>
+<body>
+  <h1 class="title">Luxcat Studio</h1>
+
+  <svg xmlns="http://www.w3.org/2000/svg" width="600" height="60" viewBox="0 0 600 60">
+    <text x="300" y="35" class="welcome-text" id="text1">🌸 Welcome to Luxcat Studio 🌸</text>
+    <text x="300" y="35" class="welcome-text" id="text2">🌸 Willkommen bei Luxcat Studio 🌸</text>
+    <text x="300" y="35" class="welcome-text" id="text3">🌸 Bienvenue chez Luxcat Studio 🌸</text>
+    <text x="300" y="35" class="welcome-text" id="text4">🌸 LuxcatStudioへようこそ 🌸</text>
+    <text x="300" y="35" class="welcome-text" id="text5">🌸 Добро пожаловать в Luxcat Studio 🌸</text>
+  </svg>
+
+  <script>
+    const texts = document.querySelectorAll(".welcome-text");
+    let index = 0;
+    function showNext() {
+      texts.forEach(t => t.style.opacity = 0);
+      texts[index].style.animation = "fadeInOut 4s ease-in-out";
+      texts[index].style.opacity = 1;
+      setTimeout(() => {
+        texts[index].style.animation = "";
+        texts[index].style.opacity = 0;
+        index = (index + 1) % texts.length;
+        showNext();
+      }, 4000);
+    }
+    showNext();
+  </script>
+</body>
+</html>
