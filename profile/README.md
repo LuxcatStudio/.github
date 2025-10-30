@@ -4,11 +4,7 @@
 
 <br />
 
-<div align="center">
-  <iframe src="https://Celestine-Lux.github.io/Celestine-Lux/animation.html"
-          width="640" height="200" frameborder="0">
-  </iframe>
-</div>
+  ![welcome](./welcome.svg)
 
 ---
 
