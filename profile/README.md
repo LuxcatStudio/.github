@@ -4,25 +4,6 @@
 
 <br />
 
-<!-- 多语言欢迎动画（静态版，兼容 GitHub） -->
-<div align="center">
-  <h3>🌸 Welcome to Luxcat Studio 🌸</h3>
-  <p>
-    Willkommen bei Luxcat Studio · Bienvenue chez Luxcat Studio ·
-    LuxcatStudioへようこそ · Добро пожаловать в Luxcat Studio
-  </p>
-</div>
-
----
-
-<div align="center">
-  <h2>🎨 项目展示</h2>
-  <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin: 20px 0;">
-    <img src="https://github.com/Celestine-Lux/Celestine-Lux/blob/main/image.png" height="400" alt="Project Image 1" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
-    <img src="https://github.com/Celestine-Lux/Celestine-Lux/blob/main/image.avif" height="400" alt="Project Image 2" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
-  </div>
-</div>
-
 ---
 
 <div align="center">
@@ -31,6 +12,10 @@
 
   <h3>🛠️ 技术栈</h3>
   <p>
+    <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" alt="C++" />
+    <img src="https://img.shields.io/badge/CMake-064F8C?style=for-the-badge&logo=cmake&logoColor=white" alt="CMake" />
+    <img src="https://img.shields.io/badge/Visual Studio-5C2D91?style=for-the-badge&logo=visualstudio&logoColor=white" alt="Visual Studio" />
+    <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux" />
     <img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white" alt="C#" />
     <img src="https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white" alt=".NET" />
     <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
