@@ -4,7 +4,7 @@
 
 <br />
 
-  ![welcome](./welcome.svg)
+![](./luxcat_welcome.svg)
 
 ---
 
