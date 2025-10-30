@@ -1,4 +1,5 @@
 <svg width="100%" height="100%" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+
   <defs>
     <!-- 背景渐变 -->
     <radialGradient id="bgGradient" cx="50%" cy="20%" r="80%">
@@ -36,19 +37,23 @@
         fill: #555;
       }
 
-      .welcome {
+      .lang {
         font-size: 32px;
         font-weight: bold;
-        fill: #e91e63;
         text-anchor: middle;
         opacity: 0;
-        animation: fadeInOut 6s infinite;
+        animation: fadeInOut 10s infinite;
       }
 
       @keyframes fadeInOut {
-        0%, 100% { opacity: 0; }
-        10%, 30% { opacity: 1; }
+        0%, 20%, 100% { opacity: 0; }
+        10% { opacity: 1; }
       }
+      #zh { animation-delay: 0s; fill: #e91e63; }
+      #en { animation-delay: 2s; fill: #3f51b5; }
+      #ja { animation-delay: 4s; fill: #009688; }
+      #fr { animation-delay: 6s; fill: #9c27b0; }
+      #es { animation-delay: 8s; fill: #ff9800; }
     ]]></style>
   </defs>
 
@@ -59,40 +64,11 @@
   <text x="400" y="200" class="title" text-anchor="middle">Luxcat Studio</text>
   <text x="400" y="260" class="desc" text-anchor="middle">Creative Code, Aesthetic Design</text>
 
-  <!-- 动态多语言欢迎文字 -->
-  <text x="400" y="360" class="welcome" id="welcomeText">Loading...</text>
+  <!-- 多语言自动切换 -->
+  <text x="400" y="360" id="zh" class="lang">欢迎来到 Luxcat Studio</text>
+  <text x="400" y="360" id="en" class="lang">Welcome to Luxcat Studio</text>
+  <text x="400" y="360" id="ja" class="lang">Luxcat Studioへようこそ</text>
+  <text x="400" y="360" id="fr" class="lang">Bienvenue à Luxcat Studio</text>
+  <text x="400" y="360" id="es" class="lang">Bienvenido a Luxcat Studio</text>
 
-  <!-- JS 动态语言检测与闪烁 -->
-  <script><![CDATA[
-    const lang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
-    const welcome = document.getElementById('welcomeText');
-
-    const texts = {
-      'zh': '欢迎来到 Luxcat Studio',
-      'zh-cn': '欢迎来到 Luxcat Studio',
-      'zh-tw': '歡迎來到 Luxcat Studio',
-      'ja': 'ようこそ、Luxcat Studioへ。',
-      'en': 'Welcome to Luxcat Studio',
-      'ko': 'Luxcat Studio에 오신 것을 환영합니다',
-      'fr': 'Bienvenue à Luxcat Studio',
-      'es': 'Bienvenido a Luxcat Studio'
-    };
-
-    let displayText = texts['en'];
-    for (const key in texts) {
-      if (lang.startsWith(key)) {
-        displayText = texts[key];
-        break;
-      }
-    }
-
-    welcome.textContent = displayText;
-
-    // 闪烁动画
-    function blink() {
-      welcome.style.opacity = (Math.sin(Date.now() / 400) * 0.3 + 0.7).toFixed(2);
-      requestAnimationFrame(blink);
-    }
-    blink();
-  ]]></script>
 </svg>
