@@ -16,7 +16,7 @@
   <p>
     <b>Luxcat Studio</b> 是一个巨大的猫窝（次猫猫喵~）<br>
     我们致力于创造充满幻想与温度的技术与艺术作品。
-    web：<https://luxcatstudio.nacho-neko.cn/>
+    <https://luxcatstudio.nacho-neko.cn/>
   </p>
 
   <br />
